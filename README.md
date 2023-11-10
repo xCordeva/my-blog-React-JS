@@ -16,10 +16,6 @@ Welcome to The Cordeva Blog – a personal blog project powered by React and Fir
 The Cordeva Blog is a personal blogging platform built using React. It allows users to explore blog posts, read articles, and engage with blog posts through comments.
 
 
-## Screenvideo
-![](./screen-video.mp4)
-
-
 ## Links
 
 - Live Site URL: [Click Here](https://xcordeva.github.io/my-blog-React-JS)
