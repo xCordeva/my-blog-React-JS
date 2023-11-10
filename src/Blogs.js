@@ -165,12 +165,12 @@ const Blogs = ({blogsData}) => {
 
                 {blogsData.map((blog)=>(
                         <div className="blog hidden" key={blog.id} style={{gridArea : `${blog.gridArea}` }}>
-                            <Link to={`/blog/${generateUrl(blog.title)}`}>
+                            <Link to={`/my-blog-React-JS/blog/${generateUrl(blog.title)}`}>
                             <img src={require(`${blog.image}`)} alt="" loading='lazy'/>
                             
                             <div className="tags">
                                 {blog.tags.map((tag)=>(
-                                    <Link to={`/tag/${tag}`}>
+                                    <Link to={`/my-blog-React-JS/tag/${tag}`}>
                                         <p className='tag' key={tag}>{tag}</p>
                                     </Link>
                                 ))}

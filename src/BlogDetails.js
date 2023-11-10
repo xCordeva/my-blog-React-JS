@@ -88,7 +88,7 @@ const BlogPage = ({blogsData, modeChanger, db, triggerRefetch}) => {
                 <div className="blog-main-details">
                     <div className="tags">
                         {blogDetails.tags.map((tag)=>(
-                            <Link to={`/tag/${tag}`} >
+                            <Link to={`/my-blog-React-JS/tag/${tag}`} >
                                 <p className='tag' key={tag}>{tag}</p>
                             </Link>
                         ))}
@@ -154,7 +154,7 @@ const BlogPage = ({blogsData, modeChanger, db, triggerRefetch}) => {
                             if(renderedBlogs < 2 && blog.id !== blogDetails.id){
                             renderedBlogs++; // Increment the counter
                             return (
-                                <Link to={`/blog/${generateUrl(blog.title)}`}>
+                                <Link to={`/my-blog-React-JS/blog/${generateUrl(blog.title)}`}>
                                 <div className="side-blog" key={blog.id}>
                                     <img src={require(`${blog.image}`)} alt="" loading='lazy'/>
                                     <div className="side-blog-title-date">
