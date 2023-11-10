@@ -127,7 +127,7 @@ const Tags = ({blogsData}) => {
                                     {tag}
                                     </div>
                                     <div className="tag-info">
-                                        {tagsCount[tag]} Articles
+                                        {tagsCount[tag]} {`${tagsCount[tag] === 1 ? 'Article' : 'Articles'}`}
                                     </div>
                                 </div>
                                 
