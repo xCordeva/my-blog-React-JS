@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/my-blog-React-JS/static/css/main.1c3ae0c6.css",
-    "main.js": "/my-blog-React-JS/static/js/main.972fb6f9.js",
+    "main.js": "/my-blog-React-JS/static/js/main.2b5d18f1.js",
     "static/media/loading-cat.gif": "/my-blog-React-JS/static/media/loading-cat.7c42375f28749cd17867.gif",
     "static/media/dowdnload.jpg": "/my-blog-React-JS/static/media/dowdnload.685a6119dfe3b4a5c705.jpg",
     "static/media/user-dark.png": "/my-blog-React-JS/static/media/user-dark.827e970f74cc15a02f60.png",
@@ -15,10 +15,10 @@
     "static/media/earlybird.png": "/my-blog-React-JS/static/media/earlybird.2fc3e73322c88300083f.png",
     "index.html": "/my-blog-React-JS/index.html",
     "main.1c3ae0c6.css.map": "/my-blog-React-JS/static/css/main.1c3ae0c6.css.map",
-    "main.972fb6f9.js.map": "/my-blog-React-JS/static/js/main.972fb6f9.js.map"
+    "main.2b5d18f1.js.map": "/my-blog-React-JS/static/js/main.2b5d18f1.js.map"
   },
   "entrypoints": [
     "static/css/main.1c3ae0c6.css",
-    "static/js/main.972fb6f9.js"
+    "static/js/main.2b5d18f1.js"
   ]
 }
