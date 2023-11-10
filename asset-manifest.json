@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/my-blog-React-JS/static/css/main.1c3ae0c6.css",
+    "main.js": "/my-blog-React-JS/static/js/main.972fb6f9.js",
+    "static/media/loading-cat.gif": "/my-blog-React-JS/static/media/loading-cat.7c42375f28749cd17867.gif",
+    "static/media/dowdnload.jpg": "/my-blog-React-JS/static/media/dowdnload.685a6119dfe3b4a5c705.jpg",
+    "static/media/user-dark.png": "/my-blog-React-JS/static/media/user-dark.827e970f74cc15a02f60.png",
+    "static/media/fire.gif": "/my-blog-React-JS/static/media/fire.423ab1a6f1370f6822eb.gif",
+    "static/media/about-me-desktop.jpg": "/my-blog-React-JS/static/media/about-me-desktop.df1c1bc882c7e687bdae.jpg",
+    "static/media/about-me-mobile.jpg": "/my-blog-React-JS/static/media/about-me-mobile.1114497ff65747d67f8e.jpg",
+    "static/media/user-light.png": "/my-blog-React-JS/static/media/user-light.73a0bc1f1a3d04cb02ec.png",
+    "static/media/owlEyes.png": "/my-blog-React-JS/static/media/owlEyes.189da43e755fd75c6916.png",
+    "static/media/owl.png": "/my-blog-React-JS/static/media/owl.9c5e988527f1e6e9e700.png",
+    "static/media/earlybird-shine.png": "/my-blog-React-JS/static/media/earlybird-shine.ebb895e1ff59f6622ef0.png",
+    "static/media/earlybird.png": "/my-blog-React-JS/static/media/earlybird.2fc3e73322c88300083f.png",
+    "index.html": "/my-blog-React-JS/index.html",
+    "main.1c3ae0c6.css.map": "/my-blog-React-JS/static/css/main.1c3ae0c6.css.map",
+    "main.972fb6f9.js.map": "/my-blog-React-JS/static/js/main.972fb6f9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1c3ae0c6.css",
+    "static/js/main.972fb6f9.js"
+  ]
+}
