@@ -1,12 +1,18 @@
 import './About.css'
 import React, { useState, useEffect } from 'react';
+import { useLocation } from "react-router-dom";
 
 
 const About = () => {
 
-
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
+    const location = useLocation();
+
+    useEffect(() => {
+      // Reset the scroll position when the location changes
+      window.scrollTo(0, 0);
+    }, [location]);
     useEffect(() => {
         const handleResize = () => {
             setWindowWidth(window.innerWidth);
@@ -21,16 +27,16 @@ const About = () => {
 
     return (
         <div className="about">
+
             <div className="blog-main">
                 <img src={require(`${windowWidth >= 800 ? `./images/about-me-desktop.jpg` : `./images/about-me-mobile.jpg`}`)} alt="cat-sneaking-a-peak" />
                 <div className="blog-shade"></div>
                 <div className="blog-main-details">
-                <div className="about-time">
                     <h1>ABOUT ME</h1>
                     <h4>A 4 - minute Read</h4>
                 </div>
-                </div>
             </div>
+            
             <div className="about-details">
 
                 <p>
@@ -51,7 +57,7 @@ const About = () => {
                     And this blog was one of the steps in becoming that by trying to create more stuff that's more like me and practicing my skills on the way.
                     <h1>The Purpose of the Blog</h1>
                     Well, I don't think I know exactly why I created this blog, but I think I just wanted a place to document my journey and to share my thoughts along the way.
-                    <h1>Am I a Good Writer?</h1>
+                    <h1>Am I a Writer/Blogger ?</h1>
                     I always liked to write (not in a professional way), but I never published anything I wrote before. So, taking this step and starting a blog was kind of hard, especially since I don't know exactly what I am going to be putting in here. I guess I'll find out on the way.
                     <br/><br/>
                     <span>
@@ -59,9 +65,9 @@ const About = () => {
                     Hope you like random stuff because I got lots of them.
                     </span>
                 </p>
+
             </div>
         </div>
-        
     );
 }
  

@@ -1,12 +1,9 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link, useLocation } from "react-router-dom";
+import { useState, useEffect, } from 'react';
 import './Tags.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faClock } from '@fortawesome/free-solid-svg-icons'
-import { useState, useEffect, } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { generateUrl } from "./Blogs";
-
-
+import { generateUrl, blogsFormatTimestamp } from "./Blogs";
 
 
 const Tags = ({blogsData}) => {
@@ -61,7 +58,7 @@ const Tags = ({blogsData}) => {
             itemsLoaded.classList.add('show-all-loaded-tagged')
             setTimeout(()=>{
                 itemsLoaded.classList.remove('show-all-loaded-tagged')
-            }, 3000)
+            }, 2500)
         }
     }, [rerender, visibleBlogCount, blogsData]);
 
@@ -96,7 +93,7 @@ const Tags = ({blogsData}) => {
                                     <img src={require(`${blog.image}`)} alt="" loading='lazy'/>
                                     <div className="side-blog-title-date">
                                         <h3>{blog.title}</h3>
-                                        <p>{blog.createdAt}</p>
+                                        <p>{blogsFormatTimestamp(blog.createdAt)}</p>
                                     </div>
                                     <div className="time-to-read">
                                         <FontAwesomeIcon icon={faClock} style={{color: "black", width: '15px'}} />

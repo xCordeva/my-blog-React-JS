@@ -1,22 +1,18 @@
-import { useParams, Link, useLocation } from "react-router-dom";
-import { generateUrl } from "./Blogs";
-import './BlogDetails.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faClock } from '@fortawesome/free-solid-svg-icons'
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
-import { doc, setDoc } from 'firebase/firestore';
-import { Timestamp } from 'firebase/firestore';
 import { useState, useEffect } from "react";
-import { formatDistanceToNow } from 'date-fns';
-import { format, isToday, isYesterday, isThisYear } from 'date-fns';
-
-
+import { useParams, Link, useLocation } from "react-router-dom";
+import './BlogDetails.css';
+import { generateUrl,blogsFormatTimestamp } from "./Blogs";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faClock,faPaperPlane } from '@fortawesome/free-solid-svg-icons'
+import { doc, setDoc, Timestamp } from 'firebase/firestore';
+import { format, isToday, isYesterday, isThisYear,formatDistanceToNow } from 'date-fns';
+import ShareButtons from "./ShareButtons";
 
 const BlogPage = ({blogsData, modeChanger, db, triggerRefetch}) => {
 
-
+    const currentUrl = window.location.href;
     const location = useLocation();
-
+    console.log(currentUrl)
     useEffect(() => {
       // Reset the scroll position when the location changes
       window.scrollTo(0, 0);
@@ -60,10 +56,7 @@ const BlogPage = ({blogsData, modeChanger, db, triggerRefetch}) => {
         triggerRefetch()
     }
 
-
-
-      
-    function formatTimestamp(createdAt){
+    function commentsFormatTimestamp(createdAt){
         if(createdAt && createdAt.toDate){
             const createdAtDate = createdAt.toDate();
 
@@ -84,7 +77,6 @@ const BlogPage = ({blogsData, modeChanger, db, triggerRefetch}) => {
             return 'Invalid Timestamp';
         }
     }
-      
 
 
     return (
@@ -107,6 +99,7 @@ const BlogPage = ({blogsData, modeChanger, db, triggerRefetch}) => {
             <div className="blog-page-content">
                 <div className="left-side blog-content">
                     <p>{blogDetails.content}</p>
+                    <ShareButtons blogUrl={currentUrl} blogTitle={blogDetails.title}/>
                     <div className="line"></div>
                     <div className="comments">
                         {blogDetails.comments.length === 0 ? `` : <h1>Comments Section</h1>}
@@ -119,7 +112,7 @@ const BlogPage = ({blogsData, modeChanger, db, triggerRefetch}) => {
                                 <div className="comment-right-side">
                                     <div className="comment-body-title-date">
                                         <h3>{comment.title || 'UNTITLED'}</h3>
-                                        <p>{formatTimestamp(comment.createdAt)}</p>
+                                        <p>{commentsFormatTimestamp(comment.createdAt)}</p>
                                     </div>
                                     <p>{comment.content}</p>
                                 </div>
@@ -157,6 +150,7 @@ const BlogPage = ({blogsData, modeChanger, db, triggerRefetch}) => {
                     <h1>Read More</h1>
                     <div className="blog-sidebar">
                         {blogsData.map((blog) => {
+
                             if(renderedBlogs < 2 && blog.id !== blogDetails.id){
                             renderedBlogs++; // Increment the counter
                             return (
@@ -165,7 +159,7 @@ const BlogPage = ({blogsData, modeChanger, db, triggerRefetch}) => {
                                     <img src={require(`${blog.image}`)} alt="" loading='lazy'/>
                                     <div className="side-blog-title-date">
                                         <h5>{blog.title}</h5>
-                                        <p>{blog.createdAt}</p>
+                                        <p>{blogsFormatTimestamp(blog.createdAt)}</p>
                                     </div>
                                     <div className="time-to-read">
                                         <FontAwesomeIcon icon={faClock} style={{color: "black", width: '15px'}} />

@@ -29,6 +29,18 @@ body{
   
 }
 
+/*Loading Page*/
+.loading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+}
+.loading img{
+  width: 100px;
+}
+
+
 /*Not Found Page*/
 .not-found{
   display: flex;

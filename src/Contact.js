@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './Contact.css';
 import { faEnvelope,faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import { useForm, ValidationError } from '@formspree/react';
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 const Contact = () => {

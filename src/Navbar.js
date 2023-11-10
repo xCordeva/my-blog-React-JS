@@ -3,15 +3,13 @@ import './Navbar.css';
 import './glitch.css';
 import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
-import { faX } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faX } from '@fortawesome/free-solid-svg-icons'
 
 const Navabar = ({modeChanger, setModeChange}) => {
 
     const location = useLocation();
 
     const [isTransparent, setTransparent] = useState(false);
-
 
     const modeHandler= ()=>{
         setModeChange(!modeChanger)
@@ -60,8 +58,6 @@ const Navabar = ({modeChanger, setModeChange}) => {
       setMenuClicked(!menuClicked)
     }
 
-
-    
     return (
       <div className='nav-container' >
         <div className={`nav-bar ${isTransparent ? 'transparent' : ''}`}>

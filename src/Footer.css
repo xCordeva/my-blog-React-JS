@@ -18,7 +18,7 @@
     box-shadow: 0 0 10px blue;
     color: blue;
 }
-.footer svg:nth-child(3){
+.footer .svg-linkedin{
     width: 30px;
     height: 30px;
     background-color: blue;

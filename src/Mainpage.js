@@ -1,13 +1,11 @@
 import './Mainpage.css';
-import Blogs from "./Blogs";
+import Blogs, { generateUrl } from "./Blogs";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
-import { generateUrl } from "./Blogs";
 import { Link } from "react-router-dom";
 
 
 const MainPage = ({blogsData}) => {
-
 
     return (
 
@@ -33,7 +31,7 @@ const MainPage = ({blogsData}) => {
                     </div> :
                     ``
             ))}
-            {<Blogs blogsData={blogsData}/>}
+            <Blogs blogsData={blogsData}/>
         </div>
         
     );

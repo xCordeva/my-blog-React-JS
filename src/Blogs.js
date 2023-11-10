@@ -1,9 +1,9 @@
 import './Blogs.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faClock } from '@fortawesome/free-solid-svg-icons'
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faClock } from '@fortawesome/free-solid-svg-icons'
+import { format, isToday, isYesterday, isThisYear } from 'date-fns';
 
 export function generateUrl(blogTitle) {
     return blogTitle
@@ -15,6 +15,25 @@ export function generateUrl(blogTitle) {
       .replace(/^-|-$/g, ''); // Remove leading/trailing hyphens
 }
 
+export function blogsFormatTimestamp(createdAt) {
+    if (createdAt && createdAt.toDate) {
+      const createdAtDate = createdAt.toDate();
+  
+      if (isToday(createdAtDate)) {
+        return 'Today';
+      } else if (isYesterday(createdAtDate)) {
+        return 'Yesterday';
+      } else if (isThisYear(createdAtDate)) {
+        // Format the date as "dddd D, MMMM" (e.g., "Monday 29, October")
+        return format(createdAtDate, 'eeee d, MMMM');
+      } else {
+        // Format the date as "dddd D, MMMM YYYY" (e.g., "Monday 29, October 2023")
+        return format(createdAtDate, 'eeee d, MMMM yyyy');
+      }
+    } else {
+      return 'Invalid Timestamp';
+    }
+}
 
 const Blogs = ({blogsData}) => {
 
@@ -50,7 +69,7 @@ const Blogs = ({blogsData}) => {
             itemsLoaded.classList.add('show-all-loaded')
             setTimeout(()=>{
                 itemsLoaded.classList.remove('show-all-loaded')
-            }, 3000)
+            }, 2500)
         }
     }, [visibleBlogCount, blogsData]);
 
@@ -139,12 +158,11 @@ const Blogs = ({blogsData}) => {
 
     });
 
-
-    
-    
+  
     return (
         <div className="blogs-area">
             <div className="blogs">
+
                 {blogsData.map((blog)=>(
                         <div className="blog hidden" key={blog.id} style={{gridArea : `${blog.gridArea}` }}>
                             <Link to={`/blog/${generateUrl(blog.title)}`}>
@@ -161,7 +179,7 @@ const Blogs = ({blogsData}) => {
                             <div className="blog-details">
                                     <h3>{blog.title}</h3>
                                 <div className="date-time-container">
-                                    <p>{blog.createdAt}</p>
+                                    <p>{blogsFormatTimestamp(blog.createdAt)}</p>
                                     <div className="time-to-read">
                                         <FontAwesomeIcon icon={faClock} style={{color: "grey", width: '15px'}} />
                                         <p>A {blog.timeToRead} Read</p>
@@ -172,14 +190,14 @@ const Blogs = ({blogsData}) => {
                         </div>
                 ))}
                 
-                
-                
             </div>
+
             <div className="all-loaded-container">
                 <div className="all-loaded">
                     <p>All Posts Loaded</p>
                 </div>
             </div>
+            
         </div>
     );
 }
