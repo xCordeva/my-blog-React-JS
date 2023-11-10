@@ -1,0 +1,52 @@
+.contact{
+    height: calc(100dvh - 200px);
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact h1{
+    color: var(--text-color);
+}
+.contact-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.thank-you{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:  var(--text-color);
+    text-align: center;
+    height: calc(100dvh - 200px);
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .thank-you h1{
+    font-size: 2rem;
+    color: var(--text-color);
+  }
+  .thank-you a{
+    background-color: hsl(12, 100%, 50%);
+    box-shadow: 0 0 10px hsl(12, 100%, 50%);
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    font-weight: bolder;
+    transition:  background-color 0.5s ease, box-shadow 0.5s ease;;
+  }
+  .thank-you a:hover{
+    background-color: hsl(12, 100%, 45%);
+    box-shadow: 0 0 10px hsl(12, 100%, 10%);
+  }

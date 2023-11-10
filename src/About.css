@@ -1,0 +1,34 @@
+.about-details{
+    display: flex;
+    flex-direction: column;
+    margin:5% 10%;
+    color: var(--text-color);
+    transition: color 0.5s ease;    
+    align-items: center;
+}
+.about-details span{
+    font-weight: 800;
+}
+.about .blog-main-details{
+    align-items: center;
+}
+.about-time{
+    display: flex;
+    flex-direction: column;
+}
+.about-time h1{
+    margin-bottom:0 ;
+}
+.about-time h4{
+    color: hsl(0,0%,60%);
+}
+.about-details{
+    width: 80%;
+    font-size: 20px;
+    line-height: 1.5;
+}
+@media (max-width:800px){
+    .about-time h1{
+        font-size: 30px;
+    }
+}

@@ -1,0 +1,49 @@
+.footer{
+    height: 200px;
+    background-color: var(--background-color-footer);
+    display: flex;
+    align-items: center;
+    color: white;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+}
+.footer svg{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 10px blue;
+    color: blue;
+}
+.footer svg:nth-child(3){
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+    padding: 10px;
+    border-radius: 50%;
+}
+.footer svg:hover {
+    animation: rotate 1s linear infinite;
+    scale: 1.1;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(15deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-15deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
