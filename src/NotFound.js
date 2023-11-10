@@ -5,7 +5,7 @@ const NotFound = () => {
     return (
         <div className="not-found">
             {/* Checking if its thet portofolio page to put on a different message */}
-            {location.pathname === '/Portfolio' ? 
+            {location.pathname === '/my-blog-React-JS/Portfolio' ? 
             <div className="not-found-portfolio">
                 <h1>oops 404! portofolio not found, I am too lazy to create it but its coming soon..hopefully</h1>
                 <p>Page Not Found</p>
