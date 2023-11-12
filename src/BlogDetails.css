@@ -106,6 +106,14 @@
     font-weight: 1000;
     color: black;
 }
+.text-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 4px;
+    background-color: hsla(0, 0%, 50%, 0.35);
+}
 .side-blog .time-to-read{
     display: flex;
     justify-content: center;

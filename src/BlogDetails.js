@@ -163,8 +163,10 @@ const BlogPage = ({blogsData, modeChanger, db, triggerRefetch}) => {
                                         <p>{blogsFormatTimestamp(blog.createdAt)}</p>
                                     </div>
                                     <div className="time-to-read">
-                                        <FontAwesomeIcon icon={faClock} style={{color: "black", width: '15px'}} />
-                                        <p>A {blog.timeToRead} Read</p>
+                                        <div className="text-icon">
+                                            <FontAwesomeIcon icon={faClock} style={{color: "black", width: '15px'}} />
+                                            <p>A {blog.timeToRead} Read</p>
+                                        </div>
                                     </div>
                                 </div>
                                 </Link>

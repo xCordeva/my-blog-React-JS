@@ -181,7 +181,7 @@ const Blogs = ({blogsData}) => {
                                 <div className="date-time-container">
                                     <p>{blogsFormatTimestamp(blog.createdAt)}</p>
                                     <div className="time-to-read">
-                                        <FontAwesomeIcon icon={faClock} style={{color: "grey", width: '15px'}} />
+                                        <FontAwesomeIcon icon={faClock} style={{color: "white", width: '15px'}} />
                                         <p>A {blog.timeToRead} Read</p>
                                     </div>
                                 </div>
