@@ -1,9 +1,11 @@
 {
   "files": {
-    "main.css": "/my-blog-React-JS/static/css/main.1c3ae0c6.css",
-    "main.js": "/my-blog-React-JS/static/js/main.c7fc75cc.js",
+    "main.css": "/my-blog-React-JS/static/css/main.4ad66420.css",
+    "main.js": "/my-blog-React-JS/static/js/main.b3f3dc3d.js",
+    "static/media/cover.png": "/my-blog-React-JS/static/media/cover.f72bde239279194e012b.png",
     "static/media/loading-cat.gif": "/my-blog-React-JS/static/media/loading-cat.7c42375f28749cd17867.gif",
     "static/media/dowdnload.jpg": "/my-blog-React-JS/static/media/dowdnload.685a6119dfe3b4a5c705.jpg",
+    "static/media/you-got-mail.jpg": "/my-blog-React-JS/static/media/you-got-mail.a77f1dd9d5853f6ea628.jpg",
     "static/media/user-dark.png": "/my-blog-React-JS/static/media/user-dark.827e970f74cc15a02f60.png",
     "static/media/fire.gif": "/my-blog-React-JS/static/media/fire.423ab1a6f1370f6822eb.gif",
     "static/media/about-me-desktop.jpg": "/my-blog-React-JS/static/media/about-me-desktop.df1c1bc882c7e687bdae.jpg",
@@ -14,11 +16,11 @@
     "static/media/earlybird-shine.png": "/my-blog-React-JS/static/media/earlybird-shine.ebb895e1ff59f6622ef0.png",
     "static/media/earlybird.png": "/my-blog-React-JS/static/media/earlybird.2fc3e73322c88300083f.png",
     "index.html": "/my-blog-React-JS/index.html",
-    "main.1c3ae0c6.css.map": "/my-blog-React-JS/static/css/main.1c3ae0c6.css.map",
-    "main.c7fc75cc.js.map": "/my-blog-React-JS/static/js/main.c7fc75cc.js.map"
+    "main.4ad66420.css.map": "/my-blog-React-JS/static/css/main.4ad66420.css.map",
+    "main.b3f3dc3d.js.map": "/my-blog-React-JS/static/js/main.b3f3dc3d.js.map"
   },
   "entrypoints": [
-    "static/css/main.1c3ae0c6.css",
-    "static/js/main.c7fc75cc.js"
+    "static/css/main.4ad66420.css",
+    "static/js/main.b3f3dc3d.js"
   ]
 }
