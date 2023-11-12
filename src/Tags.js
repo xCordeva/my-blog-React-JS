@@ -88,7 +88,7 @@ const Tags = ({blogsData}) => {
                     blog.tags.map((tag)=>(
                         tag === clickedTag ? 
                         <div className="blog-tagged" key={blog.id}>
-                            <Link to={`/my-blog-React-JS/blog/${generateUrl(blog.title)}`}>
+                            <Link to={`/blog/${generateUrl(blog.title)}`}>
                             <div className="side-blog" key={blog.id}>
                                     <img src={require(`${blog.image}`)} alt="" loading='lazy'/>
                                     <div className="side-blog-title-date">
@@ -120,7 +120,7 @@ const Tags = ({blogsData}) => {
                     blog.tags.map((tag) => {
                         if(!tagsAdded.includes(tag) && tag !== clickedTag ){
                             tagsAdded.push(tag) 
-                            return <Link to={`/my-blog-React-JS/tag/${tag}`} onClick={()=>setRerender(!rerender)}>
+                            return <Link to={`/tag/${tag}`} onClick={()=>setRerender(!rerender)}>
 
                                 <div className="tag-container" key={tag}>
                                     <div className="tag-name">

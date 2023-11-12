@@ -13,7 +13,7 @@ const MainPage = ({blogsData}) => {
             {blogsData.map((blog)=>(
                 blog.featured ?
                     <div className="featured-post" key={blog.id}>
-                        <img src={require(`${`./images/dowdnload.jpg`}`)} alt="" />
+                        <img src={require(`${blog.image}`)} alt="" />
                         <div className="shade"></div>
                         <div className="featured-post-details">
                             <div className="featured">
@@ -21,7 +21,7 @@ const MainPage = ({blogsData}) => {
                                 <img src={require(`${`./images/fire.gif`}`)} alt="Fire GIF" />
                             </div>
                             <h1>{blog.title}</h1>
-                            <Link to={`/my-blog-React-JS/blog/${generateUrl(blog.title)}`}>
+                            <Link to={`/blog/${generateUrl(blog.title)}`}>
                                 <div className="read-more-button">
                                     <button>READ MORE</button>
                                     <FontAwesomeIcon icon={faArrowRight} style={{color: "#FFF",}} />

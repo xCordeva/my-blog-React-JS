@@ -12,7 +12,6 @@ const BlogPage = ({blogsData, modeChanger, db, triggerRefetch}) => {
 
     const currentUrl = window.location.href;
     const location = useLocation();
-    console.log(currentUrl)
     useEffect(() => {
       // Reset the scroll position when the location changes
       window.scrollTo(0, 0);
@@ -83,12 +82,12 @@ const BlogPage = ({blogsData, modeChanger, db, triggerRefetch}) => {
 
         <div className="blog-page">
             <div className="blog-main">
-                <img src={require(`${`./images/dowdnload.jpg`}`)} alt="" />
+                <img src={require(`${blogDetails.image}`)} alt="" />
                 <div className="blog-shade"></div>
                 <div className="blog-main-details">
                     <div className="tags">
                         {blogDetails.tags.map((tag)=>(
-                            <Link to={`/my-blog-React-JS/tag/${tag}`} >
+                            <Link to={`/tag/${tag}`} >
                                 <p className='tag' key={tag}>{tag}</p>
                             </Link>
                         ))}
@@ -98,7 +97,9 @@ const BlogPage = ({blogsData, modeChanger, db, triggerRefetch}) => {
             </div>
             <div className="blog-page-content">
                 <div className="left-side blog-content">
-                    <p>{blogDetails.content}</p>
+                {/* data is stored as html code but as a string */}
+                <p dangerouslySetInnerHTML={{ __html: blogDetails.content }}>
+                </p>
                     <ShareButtons blogUrl={currentUrl} blogTitle={blogDetails.title}/>
                     <div className="line"></div>
                     <div className="comments">
@@ -154,7 +155,7 @@ const BlogPage = ({blogsData, modeChanger, db, triggerRefetch}) => {
                             if(renderedBlogs < 2 && blog.id !== blogDetails.id){
                             renderedBlogs++; // Increment the counter
                             return (
-                                <Link to={`/my-blog-React-JS/blog/${generateUrl(blog.title)}`}>
+                                <Link to={`/blog/${generateUrl(blog.title)}`}>
                                 <div className="side-blog" key={blog.id}>
                                     <img src={require(`${blog.image}`)} alt="" loading='lazy'/>
                                     <div className="side-blog-title-date">

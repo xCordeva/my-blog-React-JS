@@ -63,16 +63,16 @@ const Navabar = ({modeChanger, setModeChange}) => {
         <div className={`nav-bar ${isTransparent ? 'transparent' : ''}`}>
           
           <div className="nav-left-side hero-container">
-            <Link to='/my-blog-React-JS/'>
+            <Link to='/'>
               <h2 className="hero glitch layers" data-text="The Cordeva Blog"><span>The Cordeva Blog</span></h2>
             </Link>
           </div>
           <div className="nav-right-side">
               <div className="desktop-menu">
-                <Link to='/my-blog-React-JS/' className={location.pathname === '/my-blog-React-JS/' ? 'current-page' : 'not-current-page'} >Home</Link>
-                <Link to='/my-blog-React-JS/Portfolio' className={location.pathname === '/my-blog-React-JS/Portfolio' ? 'current-page' : 'not-current-page'}>My Portfolio</Link>
-                <Link to='/my-blog-React-JS/About-Me'className={location.pathname === '/my-blog-React-JS/About-Me' ? 'current-page' : 'not-current-page'}>About Me</Link>
-                <Link to='/my-blog-React-JS/Contact'className={location.pathname === '/my-blog-React-JS/Contact' ? 'current-page' : 'not-current-page'}>Contact</Link>
+                <Link to='/' className={location.pathname === '/' ? 'current-page' : 'not-current-page'} >Home</Link>
+                <Link to='/Portfolio' className={location.pathname === '/Portfolio' ? 'current-page' : 'not-current-page'}>My Portfolio</Link>
+                <Link to='/About-Me'className={location.pathname === '/About-Me' ? 'current-page' : 'not-current-page'}>About Me</Link>
+                <Link to='/Contact'className={location.pathname === '/Contact' ? 'current-page' : 'not-current-page'}>Contact</Link>
                 <div className="dark-light-mode" onClick={()=>modeHandler()}>
                     <p>{modeChanger ? `Light Mode` : `Dark Mode`}</p>
                     <i className="mode-icon">
@@ -85,10 +85,10 @@ const Navabar = ({modeChanger, setModeChange}) => {
                 <FontAwesomeIcon id="menu-icon" icon={faBars} style={{color: "hsl(240, 76%, 35%)",opacity: `${menuClicked ? '0' : '1'}` }} onClick={mobileMenuClicked} />
                 <div className={`mobile-menu-items ${menuClicked ? 'menu-clicked' : ''}`}>
                   <FontAwesomeIcon icon={faX} style={{color: "hsl(240, 76%, 35%)",}} onClick={closeMenuClicked} />
-                  <Link to='/my-blog-React-JS/' className={location.pathname === '/my-blog-React-JS/' ? 'current-page' : 'not-current-page'} onClick={closeMenuClicked} >Home</Link>
-                  <Link to='/my-blog-React-JS/Portfolio' className={location.pathname === '/my-blog-React-JS/Portfolio' ? 'current-page' : 'not-current-page'} onClick={closeMenuClicked}>My Portfolio</Link>
-                  <Link to='/my-blog-React-JS/About-Me'className={location.pathname === '/my-blog-React-JS/About-Me' ? 'current-page' : 'not-current-page'} onClick={closeMenuClicked}>About Me</Link>
-                  <Link to='/my-blog-React-JS/Contact'className={location.pathname === '/my-blog-React-JS/Contact' ? 'current-page' : 'not-current-page'} onClick={closeMenuClicked}>Contact</Link>
+                  <Link to='/' className={location.pathname === '/' ? 'current-page' : 'not-current-page'} onClick={closeMenuClicked} >Home</Link>
+                  <Link to='/Portfolio' className={location.pathname === '/Portfolio' ? 'current-page' : 'not-current-page'} onClick={closeMenuClicked}>My Portfolio</Link>
+                  <Link to='/About-Me'className={location.pathname === '/About-Me' ? 'current-page' : 'not-current-page'} onClick={closeMenuClicked}>About Me</Link>
+                  <Link to='/Contact'className={location.pathname === '/Contact' ? 'current-page' : 'not-current-page'} onClick={closeMenuClicked}>Contact</Link>
                   <div className="dark-light-mode" onClick={()=>modeHandler()}>
                       <p>{modeChanger ? `Light Mode` : `Dark Mode`}</p>
                       <i className="mode-icon">

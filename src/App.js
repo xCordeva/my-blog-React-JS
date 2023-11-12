@@ -1,5 +1,5 @@
 import { useState,useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import { initializeApp } from 'firebase/app'
 import { getFirestore, collection, getDocs,query, orderBy  } from 'firebase/firestore'
 import firebaseConfig from './FirebaseConfig'; //my key and info
@@ -28,7 +28,7 @@ function App() {
 
   const [modeChanger, setModeChange] = useState(() => {
     // a function to initialize state from localStorage
-    return JSON.parse(localStorage.getItem('modeChanger')) || false;
+    return JSON.parse(localStorage.getItem('modeChanger')) || true;
   });
 
   const [commentsTrigger, setCommentsTrigger] = useState(false)
@@ -36,7 +36,6 @@ function App() {
   const triggerRefetch = () => {
     setCommentsTrigger(!commentsTrigger); // Toggle the trigger state to force a re-fetch
   };
-
   useEffect(() => {
 
     //fetching the data from firebase
@@ -78,13 +77,13 @@ function App() {
           )
           :
           <Routes>
-            {blogsData && <Route exact path='/my-blog-React-JS/' element={<MainPage blogsData={blogsData} />} />}
-            <Route path='/my-blog-React-JS/Contact' element={<Contact />} />
-            {blogsData && <Route path='/my-blog-React-JS/blog/:blogTitle' element={<BlogDetails modeChanger={modeChanger} blogsData={blogsData} db={db} triggerRefetch={triggerRefetch} />} />}
-            {blogsData && <Route path='/my-blog-React-JS/tag/:clickedTag' element={<Tags blogsData={blogsData} />} />}
-            <Route path="/my-blog-React-JS/About-Me" element={<About />} />
+            {blogsData && <Route exact path='/' element={<MainPage blogsData={blogsData} />} />}
+            <Route path='/Contact' element={<Contact />} />
+            {blogsData && <Route path='/blog/:blogTitle' element={<BlogDetails modeChanger={modeChanger} blogsData={blogsData} db={db} triggerRefetch={triggerRefetch} />} />}
+            {blogsData && <Route path='/tag/:clickedTag' element={<Tags blogsData={blogsData} />} />}
+            <Route path="/About-Me" element={<About />} />
             {/*a not found page to work on all paths that doesnt exist withing the routes*/}
-            <Route path="/my-blog-React-JS/*" element={<NotFound />} />
+            <Route path="/*" element={<NotFound />} />
           </Routes>}
           {/*Making the footer visible on all pages*/}
           <Footer/>
