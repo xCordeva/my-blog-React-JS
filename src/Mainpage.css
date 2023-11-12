@@ -122,6 +122,9 @@
 
 
 @media (max-width:605px){
+    .featured-post-details{
+        width: 80%;
+    }
     .featured-post img{
         height: 60dvh;
     }
@@ -129,7 +132,7 @@
         height: 60dvh;
     }
     .featured-post-details h1:nth-child(2){
-        font-size: 25px;
+        font-size: 20px;
         margin-top: 0;
     }
     .featured-post-details .featured h1{

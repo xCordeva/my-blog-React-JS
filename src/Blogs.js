@@ -18,12 +18,7 @@ export function generateUrl(blogTitle) {
 export function blogsFormatTimestamp(createdAt) {
     if (createdAt && createdAt.toDate) {
       const createdAtDate = createdAt.toDate();
-  
-      if (isToday(createdAtDate)) {
-        return 'Today';
-      } else if (isYesterday(createdAtDate)) {
-        return 'Yesterday';
-      } else if (isThisYear(createdAtDate)) {
+       if (isThisYear(createdAtDate)) {
         // Format the date as "dddd D, MMMM" (e.g., "Monday 29, October")
         return format(createdAtDate, 'eeee d, MMMM');
       } else {

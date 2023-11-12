@@ -54,7 +54,7 @@
     color: blue;
 }
 .blog-content img{
-    text-align: left;
+    width: 80%;
 }
 .left-side{
     width: 70%;
@@ -317,6 +317,12 @@
     h1{
         font-size: 25px;
     }
+    .blog-content h1{
+        font-size: 30px;
+    }
+    .blog-content img{
+        width: 100%;
+    }
     .blog-page-content{
         flex-direction: column;        
     }
@@ -363,6 +369,9 @@
     
 }
 @media (max-width:550px) {
+    .blog-main-details .tag{
+        padding:7x 12px;
+    }
     .share-buttons button{
         font-size: 10px;
         border: 2px solid hsl(12, 100%, 50%);
