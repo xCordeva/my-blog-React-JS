@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/my-blog-React-JS/static/css/main.9b742e75.css",
+    "main.css": "/my-blog-React-JS/static/css/main.fa41a629.css",
     "main.js": "/my-blog-React-JS/static/js/main.83505efe.js",
     "static/media/loading-cat.gif": "/my-blog-React-JS/static/media/loading-cat.7c42375f28749cd17867.gif",
     "static/media/cover.png": "/my-blog-React-JS/static/media/cover.bc91d93e3d8e272fd267.png",
@@ -16,11 +16,11 @@
     "static/media/earlybird-shine.png": "/my-blog-React-JS/static/media/earlybird-shine.ebb895e1ff59f6622ef0.png",
     "static/media/earlybird.png": "/my-blog-React-JS/static/media/earlybird.2fc3e73322c88300083f.png",
     "index.html": "/my-blog-React-JS/index.html",
-    "main.9b742e75.css.map": "/my-blog-React-JS/static/css/main.9b742e75.css.map",
+    "main.fa41a629.css.map": "/my-blog-React-JS/static/css/main.fa41a629.css.map",
     "main.83505efe.js.map": "/my-blog-React-JS/static/js/main.83505efe.js.map"
   },
   "entrypoints": [
-    "static/css/main.9b742e75.css",
+    "static/css/main.fa41a629.css",
     "static/js/main.83505efe.js"
   ]
 }
