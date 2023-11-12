@@ -372,6 +372,9 @@
     .blog-main-details .tag{
         padding:7x 12px;
     }
+    .blog-main-details{
+        width: 90%;
+    }
     .share-buttons button{
         font-size: 10px;
         border: 2px solid hsl(12, 100%, 50%);
