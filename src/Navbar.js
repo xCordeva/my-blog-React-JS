@@ -50,10 +50,16 @@ const Navabar = ({ modeChanger, setModeChange }) => {
 
   const mobileMenuClicked = () => {
     setMenuClicked(!menuClicked);
+    if (!menuClicked) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
   };
 
   const closeMenuClicked = () => {
     setMenuClicked(!menuClicked);
+    document.body.style.overflow = "auto";
   };
 
   return (
