@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-blog-React-JS/static/css/main.198c7ca9.css",
-    "main.js": "/my-blog-React-JS/static/js/main.bd390bea.js",
+    "main.css": "/my-blog-React-JS/static/css/main.7d83aa2d.css",
+    "main.js": "/my-blog-React-JS/static/js/main.5e145b53.js",
     "static/media/loading-cat.gif": "/my-blog-React-JS/static/media/loading-cat.7c42375f28749cd17867.gif",
     "static/media/dowdnload.jpg": "/my-blog-React-JS/static/media/dowdnload.685a6119dfe3b4a5c705.jpg",
     "static/media/user-dark.png": "/my-blog-React-JS/static/media/user-dark.827e970f74cc15a02f60.png",
@@ -14,11 +14,11 @@
     "static/media/earlybird-shine.png": "/my-blog-React-JS/static/media/earlybird-shine.ebb895e1ff59f6622ef0.png",
     "static/media/earlybird.png": "/my-blog-React-JS/static/media/earlybird.2fc3e73322c88300083f.png",
     "index.html": "/my-blog-React-JS/index.html",
-    "main.198c7ca9.css.map": "/my-blog-React-JS/static/css/main.198c7ca9.css.map",
-    "main.bd390bea.js.map": "/my-blog-React-JS/static/js/main.bd390bea.js.map"
+    "main.7d83aa2d.css.map": "/my-blog-React-JS/static/css/main.7d83aa2d.css.map",
+    "main.5e145b53.js.map": "/my-blog-React-JS/static/js/main.5e145b53.js.map"
   },
   "entrypoints": [
-    "static/css/main.198c7ca9.css",
-    "static/js/main.bd390bea.js"
+    "static/css/main.7d83aa2d.css",
+    "static/js/main.5e145b53.js"
   ]
 }
