@@ -1,385 +1,388 @@
-.blog-shade{
-    width: 100%;
-    height: 50dvh;
-    background: hsla(0, 0%, 0%, 0.5);
-    position: absolute;
+.blog-shade {
+  width: 100%;
+  height: 50vh;
+  background: hsla(0, 0%, 0%, 0.5);
+  position: absolute;
 }
-.blog-main{
-    display: flex;
-    position: relative;
-    justify-content: center;
+.blog-main {
+  display: flex;
+  position: relative;
+  justify-content: center;
 }
-.blog-main img{
-    width: 100%;
-    height: 50dvh;
+.blog-main img {
+  width: 100%;
+  height: 50vh;
 }
-.blog-main-details{
-    display: flex;
-    flex-direction: column;
-    color: white;
-    position: absolute;
-    top: 40%;
-    text-align: center;
-    width: 60%;
+.blog-main-details {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  position: absolute;
+  top: 40%;
+  text-align: center;
+  width: 60%;
 }
-.blog-main-details .tags{
-    display: flex;
-    justify-content: center;
-    padding:5px 10px;
+.blog-main-details .tags {
+  display: flex;
+  justify-content: center;
+  padding: 5px 10px;
 }
-.blog-main-details .tag{
-    background-color: var(--background-color-tags);
-    padding:10px 20px;
-    margin: 10px ;
-    border-radius: 4px;
-    font-weight: 700;
-    cursor: pointer;
+.blog-main-details .tag {
+  background-color: var(--background-color-tags);
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
 }
-.blog-main-details .tag:hover{
-    background-color:var(--background-color-tags-hover);
-    scale: 1.1;
+.blog-main-details .tag:hover {
+  background-color: var(--background-color-tags-hover);
+  scale: 1.1;
 }
 
 /**/
 
-.blog-page-content{
-    display: flex;
-    color: var(--text-color);
-    transition: color 0.5s ease;
-    width: 90%;
-    margin: 0 auto;
+.blog-page-content {
+  display: flex;
+  color: var(--text-color);
+  transition: color 0.5s ease;
+  width: 90%;
+  margin: 0 auto;
 }
-.blog-content a{
-    text-decoration: none;
-    color: blue;
+.blog-content a {
+  text-decoration: none;
+  color: blue;
 }
-.blog-content img{
-    width: 80%;
+.blog-content img {
+  width: 80%;
 }
-.left-side{
-    width: 70%;
-    padding: 5% 5% 5% 0;
+.left-side {
+  width: 70%;
+  padding: 5% 5% 5% 0;
 }
-.left-side p{
-    line-height: 1.7;
-    font-size: 25px;
+.left-side p {
+  line-height: 1.7;
+  font-size: 25px;
 }
-.right-side{
-    width: 25%;
+.right-side {
+  width: 25%;
 }
-.blog-sidebar{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.blog-sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.side-blog{
-    position: relative;
-    margin-top: 10%;
-    border-radius: 10px;
-    cursor: pointer;
-    overflow: hidden;
+.side-blog {
+  position: relative;
+  margin-top: 10%;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
 }
-.side-blog img{
-    width: 100%;
-    height: 200px;
-    border-radius: 10px;
-    transition: filter 0.4s ease-in-out;
+.side-blog img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  transition: filter 0.4s ease-in-out;
 }
-.side-blog .side-blog-title-date{
-    position: absolute;
-    width: 80%;
-    top: 50%;
-    left: 10%;
-    transition: filter 0.4s ease-in-out;
+.side-blog .side-blog-title-date {
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 10%;
+  transition: filter 0.4s ease-in-out;
 }
-.side-blog .side-blog-title-date p{
-    font-size: small;
-    color: gray;
+.side-blog .side-blog-title-date p {
+  font-size: small;
+  color: gray;
 }
-.side-blog h5{
-    margin-bottom: 0;
+.side-blog h5 {
+  margin-bottom: 0;
 }
-.side-blog .time-to-read p{
-    font-size: 15px;
-    margin:0 5px;
-    white-space: nowrap;
-    font-weight: 1000;
-    color: black;
+.side-blog .time-to-read p {
+  font-size: 15px;
+  margin: 0 5px;
+  white-space: nowrap;
+  font-weight: 1000;
+  color: black;
 }
-.text-icon{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-    border-radius: 4px;
-    background-color: hsla(0, 0%, 50%, 0.35);
+.text-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 4px;
+  background-color: hsla(0, 0%, 50%, 0.35);
 }
-.side-blog .time-to-read{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+.side-blog .time-to-read {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
 }
-.side-blog:hover img{
-    filter: blur(2px);
+.side-blog:hover img {
+  filter: blur(2px);
 }
-.side-blog:hover .time-to-read{
-    opacity: 1;
+.side-blog:hover .time-to-read {
+  opacity: 1;
 }
-.side-blog:hover .side-blog-title-date{
-    filter: blur(2px);
-    transition: filter 0.4s ease-in-out;
+.side-blog:hover .side-blog-title-date {
+  filter: blur(2px);
+  transition: filter 0.4s ease-in-out;
 }
-.share-buttons{
-    margin: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.share-buttons {
+  margin: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.share-buttons svg{
-    margin-right: 10px;
+.share-buttons svg {
+  margin-right: 10px;
 }
-.share-buttons button{
-    font-size: 14px;
-    border: 3px solid hsl(12, 100%, 50%);
-    color: var(--text-color);
-    border-radius: 5px;
-    background-color: transparent;
-    font-weight: 700;
-    margin: 0 12px;
-    padding: 8px 12px;
-    min-width:  140px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+.share-buttons button {
+  font-size: 14px;
+  border: 3px solid hsl(12, 100%, 50%);
+  color: var(--text-color);
+  border-radius: 5px;
+  background-color: transparent;
+  font-weight: 700;
+  margin: 0 12px;
+  padding: 8px 12px;
+  min-width: 140px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
 }
-.share-buttons button:hover{
-    animation: jump 1s ease infinite;
-    box-shadow: 0 0 8px hsl(12, 100%, 50%);
-    background-color: hsl(12, 100%, 50%);
-    color: white;
+.share-buttons button:hover {
+  animation: jump 1s ease infinite;
+  box-shadow: 0 0 8px hsl(12, 100%, 50%);
+  background-color: hsl(12, 100%, 50%);
+  color: white;
 }
-.line{
-    height: 3px;
-    background-color: gray;
-    border-radius: 50px;
-    width: 80%;
-    margin: 10% auto;
+.line {
+  height: 3px;
+  background-color: gray;
+  border-radius: 50px;
+  width: 80%;
+  margin: 10% auto;
 }
 
 /*Comment*/
-.comments{
-    width: 90%;
+.comments {
+  width: 90%;
 }
-.comment{
-    width: 100%;
-    background-color: var(--background-color-comments);
-    margin: 5% 0;
-    border-radius: 15px;
-    padding: 2%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    color: var(--text-color);
-    transition: background-color 0.5s ease, color 0.5s ease;
-    box-shadow: 0 0 10px hsl(0, 0%, 10%);
+.comment {
+  width: 100%;
+  background-color: var(--background-color-comments);
+  margin: 5% 0;
+  border-radius: 15px;
+  padding: 2%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  color: var(--text-color);
+  transition: background-color 0.5s ease, color 0.5s ease;
+  box-shadow: 0 0 10px hsl(0, 0%, 10%);
 }
-.comment img{
-    width: 50px;
+.comment img {
+  width: 50px;
 }
-.comment .comment-left-side{
-    width: 15%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    padding:0 2%;
+.comment .comment-left-side {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 0 2%;
 }
-.comment .comment-right-side{
-    width: 80%;
-    display: flex;
-    flex-direction: column;
+.comment .comment-right-side {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
 }
 .comment .comment-right-side p:nth-child(2) {
-    font-size: 15px;
+  font-size: 15px;
 }
-.comment-right-side .comment-body-title-date{
-    margin-top: 0;
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+.comment-right-side .comment-body-title-date {
+  margin-top: 0;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
-.comment-right-side .comment-body-title-date p{
-    font-size: small;
-    color:  hsl(12, 100%, 50%);
-    margin-top: 0;
+.comment-right-side .comment-body-title-date p {
+  font-size: small;
+  color: hsl(12, 100%, 50%);
+  margin-top: 0;
 }
-.comment-right-side .comment-body-title-date h3{
-    margin: 0;
+.comment-right-side .comment-body-title-date h3 {
+  margin: 0;
 }
 
 /*leave a comment*/
-.add-comment{
-    margin: 10% 0;
+.add-comment {
+  margin: 10% 0;
 }
-.add-comment-form{
-    display: flex;
-    flex-direction: column;
-    width: 40%;
+.add-comment-form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
 }
-.add-comment-form input, textarea{
-    padding:15px 20px;
-    outline: none;
-    border: 2px solid blue;
-    margin-bottom: 5%;
-    border-radius: 5px;
-    background-color: var(--background-color-comments);
-    color: var(--text-color);
-    transition: background-color 0.5s ease, color 0.5s ease;
+.add-comment-form input,
+textarea {
+  padding: 15px 20px;
+  outline: none;
+  border: 2px solid blue;
+  margin-bottom: 5%;
+  border-radius: 5px;
+  background-color: var(--background-color-comments);
+  color: var(--text-color);
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
-.add-comment-form input:focus, textarea:focus{
-    border: 2px solid hsl(12, 100%, 50%);
+.add-comment-form input:focus,
+textarea:focus {
+  border: 2px solid hsl(12, 100%, 50%);
 }
-.add-comment-form input::placeholder, textarea::placeholder{
-    color: var(--text-color);
+.add-comment-form input::placeholder,
+textarea::placeholder {
+  color: var(--text-color);
 }
-.add-comment-form textarea{
-    padding:15px 15px 50px;
-    resize: none;
+.add-comment-form textarea {
+  padding: 15px 15px 50px;
+  resize: none;
 }
-.leave-a-comment button{
-    display: flex;
-    align-items: center;
-    color: white;
-    font-weight: 700;
-    background-color: hsl(12, 100%, 50%);
-    border: none;
-    cursor: pointer;
-    position: relative;
-    padding: 20px;
-    justify-content: center;
-    white-space: nowrap;
-    width: fit-content;
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 0 5px hsl(12, 100%, 50%);
+.leave-a-comment button {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: 700;
+  background-color: hsl(12, 100%, 50%);
+  border: none;
+  cursor: pointer;
+  position: relative;
+  padding: 20px;
+  justify-content: center;
+  white-space: nowrap;
+  width: fit-content;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 5px hsl(12, 100%, 50%);
 }
-.leave-a-comment button span{
-    margin-right: 10px;
+.leave-a-comment button span {
+  margin-right: 10px;
 }
-.leave-a-comment button svg{
-    font-size: 20px;
+.leave-a-comment button svg {
+  font-size: 20px;
 }
-.leave-a-comment:hover svg{
-    animation: fly 1.5s ease-in-out;
+.leave-a-comment:hover svg {
+  animation: fly 1.5s ease-in-out;
 }
 @keyframes fly {
-    0% {
-        transform: translateX(0) translateY(0) rotate(0deg);
-    }
-    10% {
-        transform: translateX(10px) translateY(-10px) rotate(10deg);
-    }
-    20% {
-        transform: translateX(20px) translateY(-20px) rotate(20deg);
-    }
-    30% {
-        transform: translateX(30px) translateY(-30px) rotate(30deg);
-    }
-    50% {
-        transform: translateX(40px) translateY(-40px) rotate(180deg);
-    }
-    60% {
-        transform: translateX(30px) translateY(-30px) rotate(180deg);
-    }
-    70% {
-        transform: translateX(20px) translateY(-20px) rotate(180deg);
-    }
-    80% {
-        transform: translateX(10px) translateY(-10px) rotate(180deg);
-    }
-    90% {
-        transform: translateX(0) translateY(0) rotate(180deg);
-    }
-    100% {
-        transform: translateX(0) translateY(0) rotate(0deg);
-    }
+  0% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
+  10% {
+    transform: translateX(10px) translateY(-10px) rotate(10deg);
+  }
+  20% {
+    transform: translateX(20px) translateY(-20px) rotate(20deg);
+  }
+  30% {
+    transform: translateX(30px) translateY(-30px) rotate(30deg);
+  }
+  50% {
+    transform: translateX(40px) translateY(-40px) rotate(180deg);
+  }
+  60% {
+    transform: translateX(30px) translateY(-30px) rotate(180deg);
+  }
+  70% {
+    transform: translateX(20px) translateY(-20px) rotate(180deg);
+  }
+  80% {
+    transform: translateX(10px) translateY(-10px) rotate(180deg);
+  }
+  90% {
+    transform: translateX(0) translateY(0) rotate(180deg);
+  }
+  100% {
+    transform: translateX(0) translateY(0) rotate(0deg);
+  }
 }
 
-
-@media (max-width:800px) {
-    h1{
-        font-size: 25px;
-    }
-    .blog-content h1{
-        font-size: 30px;
-    }
-    .blog-content img{
-        width: 100%;
-    }
-    .blog-page-content{
-        flex-direction: column;        
-    }
-    .left-side{
-        width: 100%;
-        padding: 5% 5% 5% 0;
-    }
-    .left-side p{
-        font-size: 20px;
-    }
-    .right-side{
-        width: 100%;
-        margin-bottom: 10%;
-    }
-    .side-blog{
-        margin-top: 5%;
-    }
-    .line{
-        margin: 20% auto;
-    }
-    .comments{
-        margin: 20% 0;
-        width: 95%;
-    }
-    .comment img{
-        width: 30px;
-    }
-    .comment .comment-left-side{
-        width: 10%;
-    }
-    .comment .comment-left-side h3,.comment .comment-right-side p:nth-child(2){
-        font-size: 10px;
-    }
-    .comment-right-side .comment-body-title-date h3{
-        font-size: 15px;
-    }
-    .add-comment-form{
-        width: 100%;
-    }
-    .leave-a-comment button{
-        padding: 15px;
-        width: 100%;
-    }
-    
+@media (max-width: 800px) {
+  h1 {
+    font-size: 25px;
+  }
+  .blog-content h1 {
+    font-size: 30px;
+  }
+  .blog-content img {
+    width: 100%;
+  }
+  .blog-page-content {
+    flex-direction: column;
+  }
+  .left-side {
+    width: 100%;
+    padding: 5% 5% 5% 0;
+  }
+  .left-side p {
+    font-size: 20px;
+  }
+  .right-side {
+    width: 100%;
+    margin-bottom: 10%;
+  }
+  .side-blog {
+    margin-top: 5%;
+  }
+  .line {
+    margin: 20% auto;
+  }
+  .comments {
+    margin: 20% 0;
+    width: 95%;
+  }
+  .comment img {
+    width: 30px;
+  }
+  .comment .comment-left-side {
+    width: 10%;
+  }
+  .comment .comment-left-side h3,
+  .comment .comment-right-side p:nth-child(2) {
+    font-size: 10px;
+  }
+  .comment-right-side .comment-body-title-date h3 {
+    font-size: 15px;
+  }
+  .add-comment-form {
+    width: 100%;
+  }
+  .leave-a-comment button {
+    padding: 15px;
+    width: 100%;
+  }
 }
-@media (max-width:550px) {
-    .blog-main-details .tag{
-        padding:7x 12px;
-    }
-    .blog-main-details{
-        width: 90%;
-    }
-    .share-buttons button{
-        font-size: 10px;
-        border: 2px solid hsl(12, 100%, 50%);
-        margin: 0 5px;
-        padding: 5px;
-        min-width:  90px;
-    }
+@media (max-width: 550px) {
+  .blog-main-details .tag {
+    padding: 7x 12px;
+  }
+  .blog-main-details {
+    width: 90%;
+  }
+  .share-buttons button {
+    font-size: 10px;
+    border: 2px solid hsl(12, 100%, 50%);
+    margin: 0 5px;
+    padding: 5px;
+    min-width: 90px;
+  }
 }
